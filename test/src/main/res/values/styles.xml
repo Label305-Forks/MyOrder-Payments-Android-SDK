@@ -1,0 +1,7 @@
+<resources>
+
+  <style name="AppBaseTheme" parent="android:Theme.Light">
+    <item name="android:windowBackground">@color/background</item>
+  </style>
+
+</resources>

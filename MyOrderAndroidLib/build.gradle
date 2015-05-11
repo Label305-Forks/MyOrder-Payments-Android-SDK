@@ -11,12 +11,10 @@ android {
 }
 
 dependencies {
-  compile files(
-      'libs/card.io.jar',
+  compile files('libs/card.io.jar',
       'libs/myorder-1.0.0.jar',
       'libs/myorderandroidlib.jar',
-      'libs/PayPal_MPL.jar'
-  )
+      'libs/PayPal_MPL.jar')
 
   compile 'com.android.support:support-v4:22.1.1'
 }

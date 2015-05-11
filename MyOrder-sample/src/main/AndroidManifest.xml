@@ -1,57 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="nl.myorder">
+<manifest
+  package="nl.myorder"
+  xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.VIBRATE" />
 
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="true" />
-    <uses-feature
-        android:name="android.hardware.camera.autofocus"
-        android:required="false" />
+  <uses-feature
+    android:name="android.hardware.camera"
+    android:required="true" />
+  <uses-feature
+    android:name="android.hardware.camera.autofocus"
+    android:required="false" />
 
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/myorder_app_icon"
-        android:label="@string/app_name"
-        android:theme="@style/LibTheme" >
-        <activity
-            android:name="nl.myorder.StartActivity"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+  <application
+    android:allowBackup="true"
+    android:icon="@drawable/myorder_app_icon"
+    android:label="@string/app_name"
+    android:theme="@style/LibTheme">
+    <activity
+      android:name="nl.myorder.StartActivity"
+      android:label="@string/app_name"
+      android:launchMode="singleTask"
+      android:screenOrientation="portrait">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <intent-filter>
-                <data
-                    android:host="ideal_return_url"
-                    android:scheme="myorder-sample" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+      <intent-filter>
+        <data
+          android:host="ideal_return_url"
+          android:scheme="myorder-sample" />
 
-                <action android:name="android.intent.action.VIEW" />
+        <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-            </intent-filter>
-            <intent-filter>
-                <data
-                    android:host="paypal_return_url"
-                    android:scheme="myorder-sample" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+      </intent-filter>
+      <intent-filter>
+        <data
+          android:host="paypal_return_url"
+          android:scheme="myorder-sample" />
 
-                <action android:name="android.intent.action.VIEW" />
+        <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-            </intent-filter>
-        </activity>
-    </application>
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+      </intent-filter>
+    </activity>
+  </application>
 
 </manifest>

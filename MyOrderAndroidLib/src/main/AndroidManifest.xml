@@ -1,51 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="nl.myorder.lib">
+<manifest
+  package="nl.myorder.lib"
+  xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- needed to do anything on the network -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.VIBRATE" />
+  <!-- needed to do anything on the network -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.VIBRATE" />
 
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="true" />
-    <uses-feature
-        android:name="android.hardware.camera.autofocus"
-        android:required="false" />
+  <uses-feature
+    android:name="android.hardware.camera"
+    android:required="true" />
+  <uses-feature
+    android:name="android.hardware.camera.autofocus"
+    android:required="false" />
 
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/myorder_app_icon" >
-        <activity
-            android:name="com.paypal.android.MEP.PayPalActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity
-            android:name=".ui.MyOrderActivity"
-            android:launchMode="singleTask" >
-            <intent-filter>
-                <data
-                    android:host="ideal_return_url"
-                    android:scheme="myorder" />
+  <application
+    android:allowBackup="true"
+    android:icon="@drawable/myorder_app_icon">
+    <activity
+      android:name="com.paypal.android.MEP.PayPalActivity"
+      android:configChanges="keyboardHidden|orientation"
+      android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <activity
+      android:name=".ui.MyOrderActivity"
+      android:launchMode="singleTask">
+      <intent-filter>
+        <data
+          android:host="ideal_return_url"
+          android:scheme="myorder" />
 
-                <action android:name="android.intent.action.VIEW" />
+        <action android:name="android.intent.action.VIEW" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-            </intent-filter>
-        </activity>
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+      </intent-filter>
+    </activity>
 
-        <!-- Replace card.io library -->
-        <activity
-            android:name="io.card.payment.CardIOActivity"
-            android:configChanges="keyboardHidden|orientation" />
-        <activity
-            android:name="io.card.payment.DataEntryActivity"
-            android:screenOrientation="portrait" />
-    </application>
+    <!-- Replace card.io library -->
+    <activity
+      android:name="io.card.payment.CardIOActivity"
+      android:configChanges="keyboardHidden|orientation" />
+    <activity
+      android:name="io.card.payment.DataEntryActivity"
+      android:screenOrientation="portrait" />
+  </application>
 
 </manifest>
